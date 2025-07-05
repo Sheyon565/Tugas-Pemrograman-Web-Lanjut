@@ -12,6 +12,10 @@ import ArticleEdit from './pages/ArticleEdit';
 import ArticleCategory from './pages/ArticleCategory';
 import CategoryCreate from './pages/CategoryCreate';
 import CategoryEdit from './pages/CategoryEdit';
+import LandingPage from './pages/LandingPage';
+import PublicArticleList from "./pages/PublicArticleList";
+import ArticleDetail from './pages/ArticleDetail';
+import Navbar from './partials/Navbar';
 import './index.css'
 
 function App() {
@@ -23,7 +27,11 @@ function App() {
 
   return (
     <Router>
+      <Navbar />
       <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/articles" element={<PublicArticleList />} />
+        <Route path="/articles/:id" element={<ArticleDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<ProtectedRoute>

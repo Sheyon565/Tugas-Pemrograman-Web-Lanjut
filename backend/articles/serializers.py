@@ -16,6 +16,11 @@ class ArticleSerializer(serializers.ModelSerializer):
     author = serializers.CharField(source='author.username', read_only=True)
     category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
     category_name = serializers.CharField(source='category.name', read_only=True)
+
+    excerpt = serializers.SerializerMethodField()
     class Meta:
         model=Article
         fields = '__all__'
+
+    def get_excerpt(self, obj):
+        return obj.excerpt()

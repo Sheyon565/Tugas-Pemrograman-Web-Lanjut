@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Django stuff:
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.py[cod]
+
+# Environment files
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Migrations
+**/migrations/
+!*/migrations/__init__.py
+
+# Node modules (in case you're using Tailwind via Node)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System
+.DS_Store
+Thumbs.db
