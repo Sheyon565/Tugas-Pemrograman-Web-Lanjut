@@ -11,7 +11,6 @@ __pycache__/
 # Django stuff:
 *.sqlite3
 db.sqlite3
-media/
 staticfiles/
 *.py[cod]
 
